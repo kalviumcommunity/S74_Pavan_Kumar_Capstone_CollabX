@@ -1,4 +1,4 @@
-**Capstone Project: Event Buddy - College Event Collaboration Platform**
+**Capstone Project: CollabX - College Event Collaboration Platform**
 
 ---
 
