@@ -21,11 +21,26 @@ const createEvent = async (req, res) => {
   }
 };
 
+// PUT - Update an event by ID
+const updateEvent = async (req, res) => {
+  try {
+    const updatedEvent = await Event.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(updatedEvent);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+};
+
 
 
 
 
 module.exports = {
   getEvents,
-  createEvent
+  createEvent,
+  updateEvent,
 };
